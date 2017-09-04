@@ -4,21 +4,21 @@ Replicating the functionality of a bank account that can be interacted with via 
 
 ## Install
 Clone the repo
-  $ git clone git@github.com:langphil/needless-backpack.git
+* git clone git@github.com:langphil/needless-backpack.git
 
 Move into the directory
-  $ cd needless-backpack
+* cd needless-backpack
 
 Install the Gems
-  $ bundle install
+* bundle install
 
 ## Tests
 Run rspec by calling
-  $ rspec
+* rspec
 
 ## Code Quality
 Check the quality of the code with Rubocop
-  $ rubocop
+* rubocop
 
 ## Dependencies
 * [Rspec](http://rspec.info/)
