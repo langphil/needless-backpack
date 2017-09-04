@@ -1,3 +1,5 @@
+[![Code Climate](https://codeclimate.com/github/codeclimate/codeclimate/badges/gpa.svg)](https://codeclimate.com/github/codeclimate/codeclimate) [![Issue Count](https://codeclimate.com/github/langphil/needless-backpack/badges/issue_count.svg)](https://codeclimate.com/github/langphil/needless-backpack) [![Test Coverage](https://codeclimate.com/github/langphil/needless-backpack/badges/coverage.svg)](https://codeclimate.com/github/langphil/needless-backpack)
+
 Personal Bank Account (tech test practice)
 ===================
 Replicating the functionality of a bank account that can be interacted with via a CLI (IRB / PRY).
@@ -13,7 +15,7 @@ Install the Gems
 * bundle install
 
 ## Tests
-Run rspec by calling
+Run rspec by calling;
 * rspec
 
 ## Code Quality
@@ -21,10 +23,10 @@ Check the quality of the code with Rubocop
 * rubocop
 
 ## Dependencies
-* [Rspec](http://rspec.info/)
-* [Rubocop](https://github.com/bbatsov/rubocop)
 * [Pry](http://pryrepl.org/)
 * [Rake](https://rubygems.org/gems/rake/versions/10.4.2)
+* [Rspec](http://rspec.info/)
+* [Rubocop](https://github.com/bbatsov/rubocop)
 * [Simplecov](https://github.com/colszowka/simplecov)
 
 ## Test specification
