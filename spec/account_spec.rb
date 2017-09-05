@@ -18,5 +18,13 @@ describe Account do
         expect(account.balance).to eq 1
       end
     end
+
+    describe '#withdrawal' do
+      it 'can increase the balance when a deposit is made' do
+        account.deposit(1)
+        account.withdraw(1)
+        expect(account.balance).to eq 0
+      end
+    end
   end
 end
