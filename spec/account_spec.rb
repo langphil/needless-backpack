@@ -11,19 +11,28 @@ describe Account do
     end
   end
 
-  context 'Account balance change' do
+  context 'Account balance' do
+    before(:each) do
+      account.deposit(1)
+    end
+
     describe '#deposit' do
       it 'can increase the balance when a deposit is made' do
-        account.deposit(1)
         expect(account.balance).to eq 1
       end
     end
 
     describe '#withdrawal' do
       it 'can increase the balance when a deposit is made' do
-        account.deposit(1)
         account.withdraw(1)
         expect(account.balance).to eq 0
+      end
+    end
+
+    describe '#negative balance' do
+      it 'cannot go into a negative balance' do
+        account.withdraw(1)
+        expect { account.withdraw(1) }.to raise_error('ERROR: you cannot have a negative balance')
       end
     end
   end
