@@ -1,8 +1,9 @@
 require 'account'
 
 describe Account do
-  subject(:account) { described_class.new banking }
+  subject(:account) { described_class.new statement}
   let(:timeNow) { Time.now.strftime("%d/%m/%Y") }
+  let(:statement) { double(:statement, :ledger => [])}
   let(:banking) { double(:banking, :balance => 0,
                                    :credit => 10,
                                    :debit => 20,
@@ -16,7 +17,7 @@ describe Account do
       end
 
       it 'should have an initial statement' do
-        expect(account.banking).to eq banking
+        expect(account.statement).to eq statement
       end
     end
   end
@@ -29,6 +30,10 @@ describe Account do
     describe '#deposit' do
       it 'can increase the balance when a deposit is made' do
         expect(account.balance).to eq 1
+      end
+
+      it 'can save to the statement ledger when deposited' do
+        expect(account.statement).to eq statement
       end
     end
 

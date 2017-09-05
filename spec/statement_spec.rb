@@ -6,7 +6,7 @@ describe Statement do
   context 'New statement' do
     describe '#initialize' do
       it 'should have an empty ledger hash' do
-        expect(statement.ledger).to eq({})
+        expect(statement.ledger).to eq([])
       end
     end
   end

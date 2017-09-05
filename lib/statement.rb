@@ -3,6 +3,6 @@ class Statement
   attr_accessor :ledger
 
   def initialize
-    @ledger = {}
+    @ledger = []
   end
 end

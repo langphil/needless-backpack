@@ -2,15 +2,16 @@ require 'statement'
 require 'banking'
 # Bank Account Object
 class Account
-  attr_reader :balance, :banking
+  attr_reader :balance, :statement
 
-  def initialize(banking = Banking.new)
+  def initialize(statement = Statement.new)
     @balance = 0
-    @banking = banking
+    @statement = statement
   end
 
   def deposit(amount)
     @balance += amount
+    @statement.ledger << Banking.new(amount, '', @balance)
   end
 
   def withdraw(amount)
