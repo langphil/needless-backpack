@@ -1,12 +1,11 @@
 # Bank Account Object
 class Account
-  attr_reader :balance
 
-  def initialize
+  def initialize()
     @balance = 0
   end
 
-  def balance
+  def balance()
     @balance
   end
 
@@ -15,7 +14,13 @@ class Account
   end
 
   def withdraw(amount)
-    raise 'ERROR: you cannot have a negative balance' if @balance <= 0
+    raise 'ERROR: you cannot have a negative balance' if minus?(amount)
     @balance -= amount
+  end
+
+  private
+
+  def minus?(amount)
+    @balance - amount < 0
   end
 end
