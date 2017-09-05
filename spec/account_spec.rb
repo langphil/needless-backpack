@@ -27,9 +27,7 @@ describe Account do
         account.withdraw(1)
         expect(account.balance).to eq 0
       end
-    end
 
-    describe '#negative balance' do
       it 'cannot go into a negative balance' do
         account.withdraw(1)
         expect { account.withdraw(1) }.to raise_error('ERROR: you cannot have a negative balance')
