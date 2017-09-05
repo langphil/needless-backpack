@@ -10,4 +10,13 @@ describe Account do
       end
     end
   end
+
+  context 'Account balance change' do
+    describe '#deposit' do
+      it 'can increase the balance when a deposit is made' do
+        account.deposit(1)
+        expect(account.balance).to eq 1
+      end
+    end
+  end
 end
