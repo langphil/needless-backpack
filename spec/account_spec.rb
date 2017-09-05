@@ -43,6 +43,11 @@ describe Account do
         expect(account.balance).to eq 0
       end
 
+      it 'can save to the statement ledger when withdrawn' do
+        account.withdraw(1)
+        expect(account.statement).to eq statement
+      end
+
       it 'cannot go into a negative balance' do
         account.withdraw(1)
         expect { account.withdraw(1) }.to raise_error('ERROR: you cannot have a negative balance')

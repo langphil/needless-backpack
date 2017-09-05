@@ -11,12 +11,13 @@ class Account
 
   def deposit(amount)
     @balance += amount
-    @statement.ledger << Banking.new(amount, '', @balance)
+    @statement.ledger << Banking.new(amount, 0, @balance)
   end
 
   def withdraw(amount)
     raise 'ERROR: you cannot have a negative balance' if minus?(amount)
     @balance -= amount
+    @statement.ledger << Banking.new(0, amount, @balance)
   end
 
   private
