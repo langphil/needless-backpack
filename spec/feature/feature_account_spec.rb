@@ -1,7 +1,11 @@
 require './lib/account'
+require './lib/banking'
 
-account = Account.new
-puts account
+banking = Banking.new
+account = Account.new(banking)
+p account
 
 account.deposit(10)
 account.withdraw(10)
+
+p account.balance

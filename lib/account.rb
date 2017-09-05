@@ -1,9 +1,12 @@
+require 'statement'
+require 'banking'
 # Bank Account Object
 class Account
-  attr_reader :balance
+  attr_reader :balance, :banking
 
-  def initialize
+  def initialize(banking = Banking.new)
     @balance = 0
+    @banking = banking
   end
 
   def deposit(amount)

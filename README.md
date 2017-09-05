@@ -20,13 +20,11 @@ Run rspec by calling;
 
 ## Code Quality
 Check the quality of the code with Rubocop
-* rubocop
+* [Code Climate](https://codeclimate.com/github/langphil/needless-backpack)
 
 ## Dependencies
 * [Pry](http://pryrepl.org/)
-* [Rake](https://rubygems.org/gems/rake/versions/10.4.2)
 * [Rspec](http://rspec.info/)
-* [Rubocop](https://github.com/bbatsov/rubocop)
 * [Simplecov](https://github.com/colszowka/simplecov)
 
 ## Test specification

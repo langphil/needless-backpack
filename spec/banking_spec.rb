@@ -7,7 +7,7 @@ describe Banking do
                               :credit => 10,
                               :debit => 20,
                               :time => timeNow
-            ) }
+                              ) }
 
   context 'New Transaction' do
     describe '#initialize' do
