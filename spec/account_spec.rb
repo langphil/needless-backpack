@@ -53,5 +53,11 @@ describe Account do
         expect { account.withdraw(1) }.to raise_error('ERROR: you cannot have a negative balance')
       end
     end
+
+    describe '#print' do
+      it 'can return a string' do
+        expect(account.printStatement()).to eq ''
+      end
+    end
   end
 end
